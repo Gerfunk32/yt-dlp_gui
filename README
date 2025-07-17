@@ -1,0 +1,68 @@
+██╗   ██╗████████╗   ██████╗ ██╗     ██████╗      ██████╗ ██╗   ██╗██╗
+╚██╗ ██╔╝╚══██╔══╝   ██╔══██╗██║     ██╔══██╗    ██╔════╝ ██║   ██║██║
+ ╚████╔╝    ██║█████╗██║  ██║██║     ██████╔╝    ██║  ███╗██║   ██║██║
+  ╚██╔╝     ██║╚════╝██║  ██║██║     ██╔═══╝     ██║   ██║██║   ██║██║
+   ██║      ██║      ██████╔╝███████╗██║         ╚██████╔╝╚██████╔╝██║
+   ╚═╝      ╚═╝      ╚═════╝ ╚══════╝╚═╝          ╚═════╝  ╚═════╝ ╚═╝
+
+
+
+
+
+
+A sleek, cross-platform desktop application for downloading YouTube videos and audio using yt-dlp. Built with PyQt5 and packed with features: dark mode, custom download locations, platform-aware shell execution, and a GUI-based shortcut installer that works on both Linux and Windows.
+
+✨ Features
+
+    Dark-themed PyQt5 GUI
+
+    Download MP4 or extract MP3 with one click
+
+    Choose your download folder interactively
+
+    Create .desktop and .lnk shortcuts via a graphical installer
+
+    OS-aware command execution (cmd on Windows, bash on Unix)
+
+    Real-time terminal output from yt-dlp
+
+    Custom icon support
+
+📁 Structure yt_dlp_gui/ ├── main.py(Entry point — sets icon and launches the app) ├── downloader.py (GUI logic — buttons, downloads, folder selection) ├── style.py(Dark theme styling) ├── setup_shortcut_gui.py (Shortcut installer for Linux and Windows) ├── DLPICON.png(App icon used by UI and shortcuts)
+
+🚀 Installation
+
+Prerequisites:
+
+    Python 3.6+
+
+    PyQt5
+
+    yt-dlp (pip install yt-dlp)
+
+    On Windows: pywin32 (pip install pywin32)
+
+To run the app:
+
+    Open terminal and cd into the yt_dlp_gui directory
+
+    Run: python3 main.py
+
+To launch the shortcut installer: Run: python3 setup_shortcut_gui.py
+
+You'll be prompted to choose where to create your shortcut:
+
+    .desktop for Linux
+
+    .lnk for Windows (uses pywin32)
+
+🧩 Customization
+    Theme: Adjust colors and fonts inside style.py
+    Default Folder: App starts with ~/Music, but you can change it using the GUI
+    Shell: Uses cmd or bash depending on detected OS, with override options for testing
+
+📦 Packaging Use PyInstaller to create single-file builds:
+
+    pip install pyinstaller
+
+    pyinstaller --onefile main.py
