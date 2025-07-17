@@ -38,7 +38,8 @@ Prerequisites:
 
     PyQt5
 
-    yt-dlp (pip install yt-dlp)
+    yt-dlp (sudo apt-get install yt-dlp, yay -S yt-dlp)
+    FFMPEG (sudo apt-get install ffmpeg, yay -S ffmpeg)
 
     On Windows: pywin32 (pip install pywin32)
 
